@@ -3,6 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import headerImg from "../assets/img/header-img.svg";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
+import profile from "../assets/img/Abstract Profile Photo Instagram Post.png"
 import TrackVisibility from 'react-on-screen';
 
 export const Banner = () => {
@@ -48,14 +49,26 @@ export const Banner = () => {
   }
 
   return (
+
+
+    
+
     <section className="banner" id="home">
+
+      
       <Container>
         <Row className="aligh-items-center">
           <Col xs={12} md={6} xl={7}>
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <span className="tagline">Welcome to my Portfolio</span>
+                <span className="tagline">Welcome to my Portfolio</span><br/>
+                <div className="a"> 
+                   Open to work
+                    <div className="b">
+                    </div>
+                </div>
+                
                 <h1>{`Hi! I'm Ruchira`}
                    <br></br>
                    <span className="txt-rotate" dataPeriod="1000"  data-rotate= '["Full | Stack developer ", "UI/UX designer "]'><span className="wrap">{text}</span></span></h1>
@@ -71,7 +84,7 @@ export const Banner = () => {
             <TrackVisibility>
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-                  <img src={headerImg} alt="Header Img"/>
+                  <img src={profile} alt="Header Img"/>
                 </div>}
             </TrackVisibility>
           </Col>
