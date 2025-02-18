@@ -618,3 +618,51 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.5px;
   margin-top: 20px;
 }
+.highlight{
+  display: flex;
+  flex-direction: row;
+  background: red;
+  color: #fff !important; 
+  text-shadow: #4A2FBD;
+  font-weight: bold;
+  font-size: medium;
+
+}
+.cricle{
+  display: flex;
+  flex-direction: row;
+  width:20px;
+  height:20px;
+  background-color: greenyellow;
+  border-radius: 100%;
+}
+.a{
+  display: flex;
+  flex-direction: row;
+  width: 150px;
+  height: 25px;
+  font-weight: bold;
+  font-size: 18px;
+  margin-right: 10px ;
+}
+
+.b{
+  display: flex;
+  flex-direction: column;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color:rgb(6, 255, 6);
+  margin-left: 10px ;
+  margin-top: 1px;
+  animation-name: a;
+  animation-duration:2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  border: 1px solid rgb(185,  247,  185);
+   
+}
+@keyframes a {
+  0% {opacity: 0.2;}
+  100% {opacity: 1;}
+}
