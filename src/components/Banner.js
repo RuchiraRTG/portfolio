@@ -59,16 +59,15 @@ export const Banner = () => {
       <Container>
         <Row className="aligh-items-center">
           <Col xs={12} md={6} xl={7}>
+          <div className="a"> 
+                   Open to work
+                    <div className="b">
+                    </div>
+                </div> <br/> 
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <span className="tagline">Welcome to my Portfolio</span><br/>
-                <div className="a"> 
-                   Open to work
-                    <div className="b">
-                    </div>
-                </div>
-                
                 <h1>{`Hi! I'm Ruchira`}
                    <br></br>
                    <span className="txt-rotate" dataPeriod="1000"  data-rotate= '["Full | Stack developer ", "UI/UX designer "]'><span className="wrap">{text}</span></span></h1>
@@ -80,7 +79,7 @@ export const Banner = () => {
               </div>}
             </TrackVisibility>
           </Col>
-          <Col xs={12} md={6} xl={5}>
+          <Col xs={6} md={6} xl={5}>
             <TrackVisibility>
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>

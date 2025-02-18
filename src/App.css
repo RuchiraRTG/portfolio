@@ -642,8 +642,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 150px;
   height: 25px;
   font-weight: bold;
-  font-size: medium;
-  margin-right: 15px ;
+  font-size: 18px;
+  margin-right: 10px ;
 }
 
 .b{
@@ -652,12 +652,17 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 20px;
   height: 20px;
   border-radius: 100%;
-  background-color:green;
-  margin-left: 15px ;
+  background-color:rgb(6, 255, 6);
+  margin-left: 10px ;
+  margin-top: 1px;
   animation-name: a;
-  animation-duration:5s;
+  animation-duration:2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  border: 1px solid rgb(185,  247,  185);
+   
 }
 @keyframes a {
-  0% {background-color: green;}
-  100%{background-color:light rgb(51, 229, 51);}
+  0% {opacity: 0.2;}
+  100% {opacity: 1;}
 }
