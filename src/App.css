@@ -88,101 +88,126 @@ nav.navbar {
   width: 100%;
   top: 0;
   z-index: 9999;
-  transition:  0.32s ease-in-out;
+  transition: 0.32s ease-in-out;
+  backdrop-filter: blur(8px);
+  background: rgba(18, 18, 18, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
+
 nav.navbar.scrolled {
   padding: 0px 0;
-  background-color: #121212;
+  background: rgba(18, 18, 18, 0.6);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12px);
 }
+
 nav.navbar a.navbar-brand {
     width: 9%;
 }
+
 nav.navbar .navbar-nav .nav-link.navbar-link {
-  font-weight: 400;
+  font-weight: 500;
   color: #fff !important;
   letter-spacing: 0.8px;
   padding: 0 25px;
-  font-size: 18px;
+  font-size: 16px;
   opacity: 0.75;
+  position: relative;
+  transition: all 0.3s ease;
 }
+
+nav.navbar .navbar-nav .nav-link.navbar-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #66CBFB;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.3s ease;
+}
+
+nav.navbar .navbar-nav .nav-link.navbar-link:hover::after,
+nav.navbar .navbar-nav .nav-link.navbar-link.active::after {
+  width: 30px;
+}
+
 nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
 nav.navbar .navbar-nav a.nav-link.navbar-link.active {
-    opacity: 1;
+  opacity: 1;
+  color: #66CBFB !important;
 }
+
 span.navbar-text {
     display: flex;
     align-items: center;
 }
 .social-icon {
-    display: inline-block;
-    margin-left: 14px;
+  display: flex;
+  gap: 18px;
+  margin-left: 70px;
 }
 .social-icon a {
-    width: 42px;
-    height: 42px;
-    background: rgba(217, 217, 217, 0.1);
-    display: inline-flex;
-    border-radius: 50%;
-    margin-right: 6px;
-    align-items: center;
-    justify-content: center;
-    line-height: 1;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-}
-.social-icon a::before {
-    content: "";
-    width: 42px;
-    height: 42px;
-    position: absolute;
-    background-color: #ffffff;
-    border-radius: 50%;
-    transform: scale(0);
-	transition: 0.3s ease-in-out;
-}
-.social-icon a:hover::before {
-    transform: scale(1);
+  width: 20px;
+  height: 20px;
+  background: none;
+  display: flex;
+  align-items:right;
+  justify-content: center;
+  border-radius: 0;
+  margin: 0;
+  border: none;
+  transition: filter 0.2s, transform 0.2s;
+  filter: grayscale(1) brightness(0.8);
 }
 .social-icon a img {
-	width: 40%;
-	z-index: 1;
-	transition: 0.3s ease-in-out;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: grayscale(1) brightness(0.8);
+  transition: filter 0.2s, transform 0.2s;
 }
 .social-icon a:hover img {
-	filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
+  filter: grayscale(0) brightness(1.2) drop-shadow(0 2px 8px #66CBFB44);
+  transform: scale(1.08);
 }
 .navbar-text button {
-  font-weight: 700;
+  font-weight: 500;
   color: #fff;
-  border: 1px solid #fff;
-  padding: 18px 34px;
-  font-size: 18px;
+  border: 2px solid #66CBFB;
+  padding: 12px 28px;
+  font-size: 16px;
   margin-left: 18px;
-	position: relative;
-	background-color: transparent;
-	transition: 0.3s ease-in-out;
+  position: relative;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  border-radius: 50px;
+  overflow: hidden;
+}
+.navbar-text button:hover {
+  background: #66CBFB;
+  color: #121212;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 203, 251, 0.3);
 }
 .navbar-text button span {
   z-index: 1;
+  position: relative;
 }
 .navbar-text button::before {
   content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 0%;
   height: 100%;
-  position: absolute;
-  background-color: #fff;
-  left: 0;
-  top: 0;
-  z-index: -1;
-  transition: 0.3s ease-in-out;
-}
-.navbar-text button:hover {
-  color: #121212;
+  background: #66CBFB;
+  transition: all 0.3s ease;
+  z-index: 0;
 }
 .navbar-text button:hover::before {
-	content: "";
-	width: 100%;
-	height: 100%;
-	position: absolute;
+  width: 100%;
 }
 nav.navbar .navbar-toggler:active,
 nav.navbar .navbar-toggler:focus {
@@ -228,6 +253,16 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 }
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	border-color: transparent;
+}
+
+@media (max-width: 991px) {
+  nav.navbar .navbar-nav .nav-link.navbar-link {
+    padding: 15px 0;
+  }
+  
+  .navbar-text button {
+    margin: 15px 0;
+  }
 }
 
 /************ Banner Css ************/
@@ -676,4 +711,22 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 1px;
   text-shadow: 0px 0px 10px rgba(102, 203, 251, 0.3);
   white-space: nowrap;
+}
+
+.navbar-link.connect-link {
+  margin-left: 18px;
+  padding: 8px 24px !important;
+  border-radius: 50px;
+  background: #66CBFB;
+  color: #121212 !important;
+  font-weight: 600;
+  box-shadow: 0 5px 15px rgba(102, 203, 251, 0.15);
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+  border: none;
+  display: inline-block;
+}
+.navbar-link.connect-link:hover, .navbar-link.connect-link.active {
+  background: #4A2FBD;
+  color: #fff !important;
+  transform: translateY(-2px) scale(1.04);
 }
