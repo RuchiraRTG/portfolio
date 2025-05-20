@@ -18,7 +18,7 @@ export const Banner = () => {
   useEffect(() => {
     let ticker = setInterval(() => {
       tick();
-    }, delta);
+    }, delta); 
 
     return () => { clearInterval(ticker) };
   }, [text])
@@ -49,13 +49,7 @@ export const Banner = () => {
   }
 
   return (
-
-
-    
-
     <section className="banner" id="home">
-
-      
       <Container>
         <Row className="aligh-items-center">
           <Col xs={12} md={6} xl={7}>
@@ -72,10 +66,18 @@ export const Banner = () => {
                    <br></br>
                    <span className="txt-rotate" dataPeriod="1000"  data-rotate= '["Full | Stack developer ", "UI/UX designer "]'><span className="wrap">{text}</span></span></h1>
 
-                  <p>Hi! I’m Ruchira Tharupathi, a dedicated Full-Stack Developer currently studying at SLIIT, with a focus on the MERN stack and Java. I’m passionate about crafting dynamic, user-centered web applications, such as my recent projects, which reflect my problem-solving abilities and creativity. My tech journey began during my studies at university, where I first delved into coding and developed a deep interest in development. I embrace challenges and constantly seek opportunities to learn and grow. I stay ahead of the curve by following the latest tech trends and innovations. My ultimate goal is to master the full spectrum of development and contribute to impactful, real-world projects. </p>
+                  <p>Hi! I'm Ruchira Tharupathi, a dedicated Full-Stack Developer currently studying at SLIIT, with a focus on the MERN stack and Java. I'm passionate about crafting dynamic, user-centered web applications, such as my recent projects, which reflect my problem-solving abilities and creativity. My tech journey began during my studies at university, where I first delved into coding and developed a deep interest in development. I embrace challenges and constantly seek opportunities to learn and grow. I stay ahead of the curve by following the latest tech trends and innovations. My ultimate goal is to master the full spectrum of development and contribute to impactful, real-world projects. </p>
 
-
-                  <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
+                  <button onClick={() => console.log('connect')}>Let's Connect <ArrowRightCircle size={25} /></button>
+                  <div style={{ marginTop: "15px", textAlign: "left" }}>
+                    <a
+                      href="/path/to/your_resume.pdf"
+                      download
+                      className="resume-download-btn"
+                    >
+                       My Resume
+                    </a>
+                  </div>
               </div>}
             </TrackVisibility>
           </Col>
