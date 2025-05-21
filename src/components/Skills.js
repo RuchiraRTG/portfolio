@@ -9,92 +9,62 @@ import NODE from "../assets/img/node-js.png"
 import github from "../assets/img/github (1).png"
 import php from "../assets/img/php.png"
 import android from "../assets/img/android.png" 
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
-import arrow1 from "../assets/img/arrow1.svg";
-import arrow2 from "../assets/img/arrow2.svg";
-import colorSharp from "../assets/img/color-sharp.png"
+import postman from "../assets/img/postman.png"
+import Typescript from "../assets/img/typescript.png"
+import anguler from "../assets/img/Angular_full_color_logo.svg.png"
+import Flutter from "../assets/img/flutter-icon-2048x2048-ufx4idi8.png"
+import springboot from "../assets/img/springboot.png"
+import tailwind from "../assets/img/tailwind.png"
+import Express from "../assets/img/ex.png"
+import { Container, Row, Col } from "react-bootstrap";
+import 'animate.css';
+import TrackVisibility from 'react-on-screen';
 
 export const Skills = () => {
-  const responsive = {
-    superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 3000 },
-      items: 5
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1
-    }
-  };
+  const skills = [
+    { name: "HTML", icon: html },
+    { name: "CSS", icon: css },
+    { name: "JS", icon: js },
+    { name: "REACT", icon: react },
+    { name: "GIT", icon: git },
+    { name: "MySQL", icon: mysql },
+    { name: "Node.js", icon: NODE },
+    { name: "GITHUB", icon: github },
+    { name: "JAVA", icon: Java },
+    { name: "Android", icon: android },
+    { name: "PHP", icon: php },
+    { name: "POSTMAN", icon:postman },
+    { name: "Anguler", icon: anguler },
+    { name: "Typescript", icon: Typescript },
+    { name: "Flutter", icon: Flutter },
+    { name: "tailwind", icon: tailwind },
+    { name: "Springboot", icon: springboot },
+    { name: "Express", icon: Express },
+  ];
 
   return (
     <section className="skill" id="skills">
-        <div className="container">
-            <div className="row">
-                <div className="col-12">
-                    <div className="skill-bx wow zoomIn">
-                        <h2>Skills</h2>
-                        <p> </p>
-                        <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
-                            <div className="item">
-                                <img src={html} alt="Image" />
-                                <h5>HTML</h5>
-                            </div>
-                            <div className="item">
-                                <img src={css} alt="Image" />
-                                <h5>CSS</h5>
-                            </div>
-                            <div className="item">
-                                <img src={js} alt="Image" />
-                                <h5>JS</h5>
-                            </div>
-                            <div className="item">
-                                <img src={react} alt="Image" />
-                                <h5>REACT</h5>
-                            </div>
-                            <div className="item">
-                                <img src={git} alt="Image" />
-                                <h5>GIT</h5>
-                            </div>
-                            <div className="item">
-                                <img src={mysql} alt="Image" />
-                                <h5>My SQL</h5>
-                            </div>
-                            <div className="item">
-                                <img src={NODE} alt="Image" />
-                                <h5>Node.js</h5>
-                            </div>
-                            <div className="item">
-                                <img src={github} alt="Image" />
-                                <h5>GITHUB</h5>
-                            </div>
-                            <div className="item">
-                                <img src={Java} alt="Image" />
-                                <h5>JAVA</h5>
-                            </div>
-                            <div className="item">
-                                <img src={android} alt="Image" />
-                                <h5>Android</h5>
-                            </div>
-                            <div className="item">
-                                <img src={php} alt="Image" />
-                                <h5>PHP</h5>
-                            </div>
-                        </Carousel>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <img className="background-image-left" src={colorSharp} alt="Image" />
+      <Container>
+        <Row>
+          <Col size={12}>
+            <TrackVisibility>
+              {({ isVisible }) =>
+                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                  <h2>Skills</h2>
+                  <p>Here are the technologies and tools I work with</p>
+                  <div className="skills-grid">
+                    {skills.map((skill, index) => (
+                      <div key={index} className="skill-item">
+                        <img src={skill.icon} alt={skill.name} />
+                        <h5>{skill.name}</h5>
+                      </div>
+                    ))}
+                  </div>
+                </div>}
+            </TrackVisibility>
+          </Col>
+        </Row>
+      </Container>
     </section>
   )
 }
