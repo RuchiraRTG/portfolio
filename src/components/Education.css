@@ -1,0 +1,81 @@
+.education-container {
+  padding: 1rem 0;
+}
+
+.education-timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.education-item {
+  padding: 1.2rem;
+  margin-bottom: 1.2rem;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  background: rgba(74, 47, 189, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.education-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 8px;
+  padding: 2px;
+  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.education-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 3px 10px rgba(170, 54, 124, 0.3);
+}
+
+.education-content {
+  position: relative;
+}
+
+.education-content h3 {
+  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.3rem;
+  font-size: 1.1rem;
+}
+
+.education-content h4 {
+  color: #fff;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.education-date {
+  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.education-description {
+  color: #fff;
+  line-height: 1.4;
+  font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .education-item {
+    padding: 1rem;
+  }
+} 
