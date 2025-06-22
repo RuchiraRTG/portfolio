@@ -832,6 +832,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-weight: 700;
   color: #66CBFB;
   margin-bottom: 10px;
+
 }
 .education-content h4 {
   font-size: 18px;
@@ -848,6 +849,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #B8B8B8;
   font-size: 16px;
   line-height: 1.6;
+  text-align: left;
 }
 .education-description br {
   margin-bottom: 8px;
