@@ -2,7 +2,7 @@
 
 ## 🎯 Project Overview
 
-This portfolio presents Ruchira Tharupathi, a Software Engineering student at SLIIT, specializing in full-stack web development (MERN stack, Java, and more). The site demonstrates modern web practices, responsive design, and a showcase of real-world projects.
+This portfolio presents Ruchira Tharupathi, a student at SLIIT, specializing in full-stack web development (MERN stack, Java, and more). The site demonstrates modern web practices, responsive design, and a showcase of real-world projects.
 
 ### 🌟 Key Features
 
