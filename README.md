@@ -67,43 +67,6 @@ Passionate about building dynamic, user-centered web applications and always eag
    **Tech:** Spring Boot, React, Tailwind, MongoDB
  
 
-## 📬 Contact
-
-- **Email:** [your-email@example.com]
-- **LinkedIn:** [Your LinkedIn Profile]
-- **Portfolio:** [Your Portfolio URL]
-
-Or use the contact form on the website to send a direct message!
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Node.js 18+ and npm
-
-### Installation
-
-```bash
-git clone https://github.com/yourusername/portfolio.git
-cd portfolio
-npm install
-```
-
-### Running the App
-
-- **Frontend:**  
-  ```bash
-  npm start
-  ```
-- **Backend (for contact form):**  
-  ```bash
-  node server.js
-  ```
-
-## 📄 License
-
-This project is open-source and available under the MIT License.
-
 **Built with ❤️ by Ruchira Tharupathi**
 
 Let me know if you want to add/change any details (like your email, LinkedIn, or project descriptions), or if you want this written directly to your README.md!
