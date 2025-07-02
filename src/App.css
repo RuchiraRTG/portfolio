@@ -145,8 +145,13 @@ span.navbar-text {
 }
 .social-icon {
   display: flex;
-  gap: 18px;
-  margin-left: 70px;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 24px;
+  margin-left: 40px;
+  width: 100%;
+  max-width: 300px;
 }
 .social-icon a {
   width: 20px;
@@ -598,12 +603,36 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 /************ Footer Css ************/
-.footer {
-  padding: 0 0 50px 0;
-  background-image: url('./assets/img/footer-bg.png');
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
+footer.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #181818;
+  padding: 32px 0 16px 0;
+}
+.footer-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.social-icon {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 24px;
+  margin-left: 200px;
+  width: 100%;
+  max-width: 300px;
+}
+.footer p {
+  text-align: center;
+  margin: 0;
+  width: 100%;
 }
 .newsletter-bx {
   background: #FFFFFF;
@@ -667,13 +696,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .footer img {
   width: 26%;
-}
-.footer p {
-  font-weight: 400;
-  font-size: 14px;
-  color: #B8B8B8;
-  letter-spacing: 0.5px;
-  margin-top: 20px;
 }
 .highlight{
   display: flex;
