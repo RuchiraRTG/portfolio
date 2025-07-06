@@ -71,11 +71,11 @@ export const Banner = () => {
                   <button onClick={() => console.log('connect')}>Let's Connect <ArrowRightCircle size={25} /></button>
                   <div style={{ marginTop: "15px", textAlign: "left" }}>
                     <a
-                      href="/path/to/your_resume.pdf"
-                      download
+                      href={require("../assets/img/Ruchira cv resume.pdf")}
+                      download="Ruchira_Tharupathi_Resume.pdf"
                       className="resume-download-btn"
                     >
-                       My Resume
+                       Download My Resume
                     </a>
                   </div>
               </div>}
