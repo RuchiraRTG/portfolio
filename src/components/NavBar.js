@@ -53,10 +53,10 @@ export const NavBar = () => {
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
-                <a href="#"><img src={navIcon1} alt="" /></a>
-                <a href="#"><img src={navIcon2} alt="" /></a>
-                <a href="#"><img src={navIcon3} alt="" /></a>
-                <a href="#"><img src={navIcon4} alt="" /></a>
+                <a href="https://www.linkedin.com/in/ruchira-tharupathi-0b9b6334b/"><img src={navIcon1} alt="" /></a>
+                <a href="https://www.facebook.com/share/1758kj952M/?mibextid=wwXIfr"><img src={navIcon2} alt="" /></a>
+                <a href="https://www.instagram.com/ruchira__0524?igsh=MWJzbGZveGNseXhzNg%3D%3D&utm_source=qr"><img src={navIcon3} alt="" /></a>
+                <a href="https://github.com/RuchiraRTG"><img src={navIcon4} alt="" /></a>
               </div>
             </span>
           </Navbar.Collapse>
