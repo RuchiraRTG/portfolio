@@ -1,20 +1,22 @@
 import { Col } from "react-bootstrap";
 
 const techColors = {
-  React: '#61dafb',
-  'CSS': '#264de4',
-  'Node.js': '#3c873a',
+  'React': '#61dafb',
+  'CSS': '#57B9FF',
+  'Node.js': '#008000',
   'Express.js': '#ffffff',
-  'MongoDB': '#4db33d',
+  'MongoDB': '#5CE65C',
   'Firebase': '#ffcb2b',
   'Material UI': '#0081cb',
   'Flutter': '#02569B',
   'Dart': '#0175C2',
-  'tailwind': '#2563eb',
+  'tailwind': '#90D5FF',
   'springboot': '#6ab04c',
-  'HTML': '#e34c26',
+  'HTML': '#FF0000',
   'JavaScript': '#f7df1e',
   'Kotlin': '#7f52ff',
+  'MySQL': '#FF5C00',
+  'PHP': '#9D00FF',
 };
 
 export const ProjectCard = ({ title, description, imgUrl, technologies }) => {

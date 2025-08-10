@@ -8,6 +8,7 @@ import skill from "../assets/img/skill.png";
 import todo from "../assets/img/todo.jpg";
 import salonPabaluImg from "../assets/img/salon pabalu.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
+import drydrop from "../assets/img/drydrop.jpg"
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
@@ -24,13 +25,13 @@ export const Projects = () => {
       title: "JOB Expert",
       description: "Job Expert is a platform that allows users to find jobs and apply for them. special features are create a cv generator and job search.",
       imgUrl: jobexpert,
-      technologies: ["React", "Express.js", "MongoDB", "Node.js","tailwind"],
+      technologies: ["React", "Express.js", "MongoDB","tailwind", "Node.js"],
     },
     {
       title: "EduFlow",
-      description: "Design & Development",
+      description: "Eduflow is skill sharing platform a platform that allows users to share their skills and knowledge with others.",
       imgUrl: skill,
-      technologies: ["springboot","React","tailwind","MongoDB",],
+      technologies: ["React","springboot","tailwind","MongoDB",],
     },
     {
       title: "TODO mobile app",
@@ -39,17 +40,17 @@ export const Projects = () => {
       technologies: ["Kotlin"],
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg2,
-      technologies: ["HTML", "CSS", "JavaScript"],
+      title: "Dry Drop Laundry Management System",
+      description: " A feature-rich, production-ready laundry management system.Designed for real-world deployment with smart environment detection and zero-config hosting compatibility.",
+      imgUrl: drydrop,
+      technologies: ["HTML","PHP","CSS","MySQL"],
     },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
-      technologies: ["HTML", "CSS", "JavaScript"],
-    },
+    // {
+    //   title: "Dry Drop",
+    //   description: "Design & Development",
+    //   imgUrl: projImg3,
+    //   technologies: ["HTML", "CSS", "JavaScript"],
+    // },
   ];
 
   return (
