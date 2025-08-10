@@ -3,9 +3,13 @@ import { ProjectCard } from "./ProjectCard";
 import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
+<<<<<<< Updated upstream
 import jobexpert from "../assets/img/job expert .png";
 import skill from "../assets/img/skill.png";
 import todo from "../assets/img/todo.jpg";
+=======
+import jobexpert from "../assets/img/job expert .png"
+>>>>>>> Stashed changes
 import salonPabaluImg from "../assets/img/salon pabalu.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import drydrop from "../assets/img/drydrop.jpg"
@@ -25,7 +29,10 @@ export const Projects = () => {
       title: "JOB Expert",
       description: "Job Expert is a platform that allows users to find jobs and apply for them. special features are create a cv generator and job search.",
       imgUrl: jobexpert,
+<<<<<<< Updated upstream
       technologies: ["React", "Express.js", "MongoDB","tailwind", "Node.js"],
+=======
+>>>>>>> Stashed changes
     },
     {
       title: "EduFlow",
