@@ -4,9 +4,13 @@ import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 import jobexpert from "../assets/img/job expert .png";
 import skill from "../assets/img/skill.png";
 import todo from "../assets/img/todo.jpg";
+=======
+import jobexpert from "../assets/img/job expert .png"
+>>>>>>> Stashed changes
 =======
 import jobexpert from "../assets/img/job expert .png"
 >>>>>>> Stashed changes
@@ -30,7 +34,10 @@ export const Projects = () => {
       description: "Job Expert is a platform that allows users to find jobs and apply for them. special features are create a cv generator and job search.",
       imgUrl: jobexpert,
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       technologies: ["React", "Express.js", "MongoDB","tailwind", "Node.js"],
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
     },
