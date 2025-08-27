@@ -6,6 +6,7 @@ import projImg3 from "../assets/img/project-img3.png";
 import jobexpert from "../assets/img/job expert .png";
 import skill from "../assets/img/skill.png";
 import todo from "../assets/img/todo.jpg";
+import todonew from "../assets/img/todonew.jpg"
 import salonPabaluImg from "../assets/img/salon pabalu.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import drydrop from "../assets/img/drydrop.jpg"
@@ -37,7 +38,7 @@ export const Projects = () => {
     {
       title: "TODO mobile app",
       description: "TODO mobile app is a simple todo list app that allows you to add, edit, and delete tasks.",
-      imgUrl: todo,
+      imgUrl: todonew,
       technologies: ["Kotlin"],
     },
     {
