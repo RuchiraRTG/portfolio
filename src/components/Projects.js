@@ -10,6 +10,7 @@ import todonew from "../assets/img/todonew.jpg"
 import salonPabaluImg from "../assets/img/salon pabalu.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import drydrop from "../assets/img/drydrop.jpg"
+import sk2 from "../assets/img/sk2.jpg"
 import statistic from "../assets/img/statistic.png"
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -32,7 +33,7 @@ export const Projects = () => {
     {
       title: "EduFlow",
       description: "Eduflow is skill sharing platform a platform that allows users to share their skills and knowledge with others.",
-      imgUrl: skill,
+      imgUrl: sk2,
       technologies: ["React","springboot","tailwind","MongoDB",],
     },
     {
