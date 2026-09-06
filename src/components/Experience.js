@@ -54,38 +54,49 @@ const ExpItem = ({ item, isOpen, onToggle }) => {
 
   return (
     <div
-      className={`exp-row ${isOpen ? "exp-row--open" : ""}`}
+      className={`experience-item ${isOpen ? "open" : ""}`}
       onClick={onToggle}
       role="button"
       aria-expanded={isOpen}
       tabIndex={0}
       onKeyDown={(e) => e.key === "Enter" && onToggle()}
+      style={{ display: "block" }}
     >
-      {/* Original design row — company / role / date */}
-      <div className="exp-row-main">
-        <div className="experience-item-left">
-          <span className="experience-company">{item.company}</span>
-          <span className="experience-role">{item.role}</span>
-        </div>
-        <div className="exp-row-right">
-          <span className="experience-date">{item.date}</span>
-          {/* Small arrow indicator */}
-          <span className="exp-row-arrow" aria-hidden="true">
-            {isOpen ? "✕" : "↗"}
-          </span>
-        </div>
+      {/* Header: Company Name and Arrow */}
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", width: "100%" }}>
+        <span className="experience-company">{item.company}</span>
+        <span style={{ fontSize: "18px", color: "rgba(255,255,255,0.4)" }} aria-hidden="true">
+          {isOpen ? "✕" : "↗"}
+        </span>
       </div>
 
-      {/* Expandable description — same dark theme */}
+      {/* Expandable Body */}
       <div
-        className="exp-row-desc-wrap"
-        style={{ maxHeight: isOpen ? `${descHeight + 32}px` : "0px" }}
+        style={{
+          maxHeight: isOpen ? `${descHeight + 40}px` : "0px",
+          overflow: "hidden",
+          transition: "max-height 0.4s ease",
+        }}
       >
-        <div className="exp-row-desc-inner" ref={descRef}>
-          <p className="exp-row-desc">{item.description}</p>
-          <div className="exp-row-tags">
+        <div ref={descRef} style={{ paddingTop: "16px" }}>
+          {/* Role & Date moved here as requested */}
+          <div style={{ display: "flex", flexDirection: "column", gap: "4px", marginBottom: "16px" }}>
+            <span className="experience-role">{item.role}</span>
+            <span className="experience-date" style={{ textAlign: "left", color: "rgba(255,255,255,0.4)" }}>{item.date}</span>
+          </div>
+          
+          <p style={{ fontSize: "14px", color: "rgba(255,255,255,0.6)", lineHeight: "1.7", marginBottom: "16px" }}>
+            {item.description}
+          </p>
+          
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
             {item.tags.map((t) => (
-              <span key={t} className="exp-row-tag">{t}</span>
+              <span key={t} style={{
+                fontSize: "12px", padding: "4px 12px", borderRadius: "20px", 
+                border: "1px solid rgba(255,255,255,0.1)", color: "rgba(255,255,255,0.6)"
+              }}>
+                {t}
+              </span>
             ))}
           </div>
         </div>

@@ -1,12 +1,16 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import profile from "../assets/img/Abstract Profile Photo Instagram Post.png";
+import profile from "../assets/img/new_propic.png";
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(150);
+  const [isHovered, setIsHovered] = useState(false);
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const photoRef = useRef(null);
+  
   const toRotate = ["Full Stack Developer", "UI/UX Designer", "MERN Stack Dev"];
   const period = 2500;
 
@@ -38,9 +42,24 @@ export const Banner = () => {
     }
   };
 
+  const handleMouseMove = (e) => {
+    if (!photoRef.current) return;
+    const rect = photoRef.current.getBoundingClientRect();
+    setMousePos({
+      x: e.clientX - rect.left,
+      y: e.clientY - rect.top,
+    });
+  };
+
   return (
-    <section className="hero-section" id="home">
-      <div className="hero-inner">
+    <section 
+      className="hero-section" 
+      id="home"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      onMouseMove={handleMouseMove}
+    >
+      <div className="hero-inner" style={{ position: 'relative' }}>
 
         {/* Top Row: RUCHIRA (outlined) */}
         <motion.div
@@ -48,6 +67,7 @@ export const Banner = () => {
           initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
+          style={{ zIndex: 10, position: "relative", pointerEvents: "none" }}
         >
           <span className="hero-name-outlined">RUCHIRA&nbsp;</span>
           <span className="hero-name-filled">THARUPATHI</span>
@@ -84,14 +104,30 @@ export const Banner = () => {
             </a>
           </motion.div>
 
-          {/* Center Photo */}
+          {/* Center Photo - slide up behind text on hover */}
           <motion.div
             className="hero-photo-wrap"
-            initial={{ opacity: 0, scale: 0.85 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.9, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
+            ref={photoRef}
+            initial={{ opacity: 0, scale: 0.9, y: 150 }}
+            animate={{ 
+              opacity: isHovered ? 1 : 0, 
+              scale: isHovered ? 1.05 : 0.95,
+              y: isHovered ? -10 : 100
+            }}
+            transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
+            style={{ 
+              zIndex: 5, 
+              position: "relative", 
+              pointerEvents: "none",
+              "--mouse-x": `${mousePos.x}px`,
+              "--mouse-y": `${mousePos.y}px`
+            }}
           >
-            <img src={profile} alt="Ruchira Tharupathi" />
+            {/* Bottom image (Grayscale) */}
+            <img src={profile} alt="Ruchira Tharupathi" className="profile-img-bw" />
+            
+            {/* Top image (Color, Revealed by Mask) */}
+            <img src={profile} alt="Ruchira Tharupathi" className="profile-img-color" />
           </motion.div>
 
           {/* Right Social Links */}

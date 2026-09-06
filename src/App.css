@@ -350,9 +350,9 @@ nav.navbar.scrolled {
 }
 
 .hero-inner {
-  max-width: 1200px;
+  max-width: 1440px;
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 0 24px;
   width: 100%;
 }
 
@@ -472,7 +472,7 @@ nav.navbar.scrolled {
 
 /* Profile Photo */
 .hero-photo-wrap {
-  width: clamp(240px, 28vw, 400px);
+  width: clamp(300px, 35vw, 550px);
   position: relative;
   z-index: 2;
 }
@@ -482,7 +482,22 @@ nav.navbar.scrolled {
   height: auto;
   object-fit: contain;
   display: block;
-  filter: grayscale(15%);
+}
+
+.profile-img-bw {
+  filter: grayscale(100%);
+  position: relative;
+}
+
+.profile-img-color {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Soft brush reveal effect using mask-image with a blurred radial gradient */
+  -webkit-mask-image: radial-gradient(circle at var(--mouse-x) var(--mouse-y), black 0%, transparent 150px);
+  mask-image: radial-gradient(circle at var(--mouse-x) var(--mouse-y), black 0%, transparent 150px);
 }
 
 /* Social Links Right */
@@ -490,7 +505,8 @@ nav.navbar.scrolled {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: flex-start;
+  align-items: flex-end;
+  /* Moved to right edge */
   padding-bottom: 40px;
   gap: 12px;
 }
@@ -1067,116 +1083,10 @@ nav.navbar.scrolled {
   transform: rotate(45deg);
 }
 
-/* Contact Form */
-.contact-form-wrap {
-  background: var(--bg-card);
-  border-radius: var(--radius-lg);
-  padding: 48px;
-  max-width: 700px;
-  margin: 0 auto;
-  box-shadow: var(--shadow-md);
-  border: 1px solid var(--border);
-  text-align: left;
-}
-
-.contact-form-title {
-  font-size: 28px;
-  font-weight: 800;
-  color: var(--text-primary);
-  margin-bottom: 8px;
-}
-
-.contact-form-sub {
-  font-size: 14px;
-  color: var(--text-secondary);
-  margin-bottom: 32px;
-}
-
-.form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin-bottom: 16px;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  margin-bottom: 16px;
-}
-
-.form-group.full {
-  grid-column: 1 / -1;
-}
-
-.form-group label {
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--text-secondary);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  background: var(--bg-secondary);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  color: var(--text-primary);
-  padding: 14px 18px;
-  font-size: 15px;
-  font-weight: 400;
-  font-family: var(--font-main);
-  transition: var(--transition);
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-  border-color: var(--text-primary);
-  background: var(--bg-card);
-  box-shadow: 0 0 0 3px rgba(17, 17, 17, 0.08);
-}
-
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-  color: var(--text-muted);
-}
-
-.form-group textarea {
-  resize: vertical;
-  min-height: 120px;
-}
-
-.form-submit-btn {
-  width: 100%;
-  padding: 16px;
-  background: var(--bg-dark);
-  color: var(--text-white);
-  border-radius: var(--radius-md);
-  font-size: 16px;
-  font-weight: 600;
-  font-family: var(--font-main);
-  cursor: pointer;
-  border: 2px solid var(--bg-dark);
-  transition: var(--transition);
-  margin-top: 8px;
-}
-
-.form-submit-btn:hover {
-  background: transparent;
-  color: var(--bg-dark);
-  transform: translateY(-1px);
-}
-
+/* Contact form removed */
 @media (max-width: 600px) {
-  .form-row {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-form-wrap {
-    padding: 28px 20px;
+  .contact-main-title {
+    font-size: clamp(32px, 8vw, 50px);
   }
 }
 
@@ -1611,6 +1521,7 @@ footer.footer-modern {
     opacity: 0;
     transform: translateY(12px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -1695,4 +1606,117 @@ footer.footer-modern {
   .acc2-company {
     font-size: 16px;
   }
+}
+
+/* ============================================
+   BOT UPDATER UI
+   ============================================ */
+.bot-updater-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 30px auto 20px;
+  max-width: 150px;
+  user-select: none;
+}
+
+.bot-graphic-area {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.bot-head {
+  background: var(--text-primary, #111);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.bot-eyes {
+  display: flex;
+  gap: 16px;
+}
+
+.bot-eye {
+  width: 12px;
+  height: 32px;
+  background: #fff;
+  border-radius: 12px;
+}
+
+.orbit-dot-wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.orbit-dot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: var(--text-secondary, #666);
+  border-radius: 50%;
+}
+
+.bot-text-area {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bot-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary, #111);
+  margin-bottom: 6px;
+  margin-top: 0;
+}
+
+.bot-subtitle {
+  font-size: 13px;
+  color: var(--text-secondary, #666);
+  margin: 0;
+}
+
+.bot-progress-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.bot-progress-track {
+  width: 100%;
+  height: 6px;
+  background: var(--bg-secondary, #eaeaea);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.bot-progress-fill {
+  height: 100%;
+  background: #3b82f6;
+  border-radius: 4px;
+  transition: width 0.15s linear;
+}
+
+.bot-progress-text {
+  font-size: 12px;
+  font-weight: 700;
+  color: #3b82f6;
 }
