@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import profile from "../assets/img/new_propic.png";
+import profile from "../assets/img/new_propic2.png";
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -10,7 +10,7 @@ export const Banner = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const photoRef = useRef(null);
-  
+
   const toRotate = ["Full Stack Developer", "UI/UX Designer", "MERN Stack Dev"];
   const period = 2500;
 
@@ -52,8 +52,8 @@ export const Banner = () => {
   };
 
   return (
-    <section 
-      className="hero-section" 
+    <section
+      className="hero-section"
       id="home"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -109,15 +109,15 @@ export const Banner = () => {
             className="hero-photo-wrap"
             ref={photoRef}
             initial={{ opacity: 0, scale: 0.9, y: 150 }}
-            animate={{ 
-              opacity: isHovered ? 1 : 0, 
+            animate={{
+              opacity: isHovered ? 1 : 0,
               scale: isHovered ? 1.05 : 0.95,
               y: isHovered ? -10 : 100
             }}
             transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
-            style={{ 
-              zIndex: 5, 
-              position: "relative", 
+            style={{
+              zIndex: 5,
+              position: "relative",
               pointerEvents: "none",
               "--mouse-x": `${mousePos.x}px`,
               "--mouse-y": `${mousePos.y}px`
@@ -125,7 +125,7 @@ export const Banner = () => {
           >
             {/* Bottom image (Grayscale) */}
             <img src={profile} alt="Ruchira Tharupathi" className="profile-img-bw" />
-            
+
             {/* Top image (Color, Revealed by Mask) */}
             <img src={profile} alt="Ruchira Tharupathi" className="profile-img-color" />
           </motion.div>
