@@ -3,28 +3,34 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const SKILL_CATEGORIES = [
   {
-    id: "frontend",
-    title: "Frontend",
+    id: "dev-engineering",
+    title: "Development & Engineering",
     percentage: 95,
-    skills: "HTML, CSS, JavaScript, TypeScript, React.js, Angular, Tailwind CSS"
+    skills: "JavaScript/TypeScript, React/Next.js, Node.js/Express, Python, MongoDB/MySQL, C# / .NET, Kotlin, PHP"
   },
   {
-    id: "backend",
-    title: "Backend",
+    id: "product-management",
+    title: "Product Management & Strategy",
     percentage: 85,
-    skills: "Node.js, Express, Java, Spring Boot, PHP, REST APIs"
+    skills: "Team Organization, Stakeholder Management, User Research, Requirements Gathering, Product Strategy, Product Roadmapping, Agile/Scrum, Data Analysis"
   },
   {
-    id: "mobile",
-    title: "Mobile App",
+    id: "cloud-devops",
+    title: "Cloud & DevOps",
     percentage: 80,
-    skills: "Android (Kotlin/Java), Flutter"
+    skills: "Git/GitHub, API Design & Testing, Microsoft Azure, Docker & Containers, Microservices, CI/CD Pipelines"
   },
   {
-    id: "database",
-    title: "Database & Tools",
+    id: "leadership",
+    title: "Leadership & Team Management",
     percentage: 90,
-    skills: "MySQL, Git, GitHub, Postman, Agile"
+    skills: "Technical Comm., Team Leadership, Project Management, Cross-functional Coll., Problem-Solving, Mentoring & Guidance"
+  },
+  {
+    id: "ux-design",
+    title: "UX & UI Design",
+    percentage: 85,
+    skills: "Figma, Responsive Design, Accessibility (WCAG), UX Design, A/B Testing, Design Systems"
   }
 ];
 
