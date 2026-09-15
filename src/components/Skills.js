@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, animate } from "framer-motion";
 
 const SKILL_CATEGORIES = [
   {
@@ -35,6 +35,24 @@ const SKILL_CATEGORIES = [
 ];
 
 const SkillAccordionItem = ({ item, isOpen, onToggle }) => {
+  const [displayCount, setDisplayCount] = useState(0);
+
+  useEffect(() => {
+    if (isOpen) {
+      const controls = animate(0, item.percentage, {
+        duration: 1.2,
+        ease: "easeOut",
+        delay: 0.2,
+        onUpdate(value) {
+          setDisplayCount(Math.round(value));
+        }
+      });
+      return () => controls.stop();
+    } else {
+      setDisplayCount(0);
+    }
+  }, [isOpen, item.percentage]);
+
   return (
     <div className={`skills-accordion-item ${isOpen ? 'open' : ''}`}>
       <div 
@@ -87,7 +105,7 @@ const SkillAccordionItem = ({ item, isOpen, onToggle }) => {
                     />
                   </svg>
                   <div className="skills-percentage-text-small" style={{ fontSize: "18px" }}>
-                    {item.percentage}+
+                    {displayCount}+
                   </div>
                 </div>
               </div>
@@ -100,7 +118,7 @@ const SkillAccordionItem = ({ item, isOpen, onToggle }) => {
 };
 
 export const Skills = () => {
-  const [openId, setOpenId] = useState(SKILL_CATEGORIES[0].id);
+  const [openId, setOpenId] = useState(null);
 
   const toggle = (id) => setOpenId((prev) => (prev === id ? null : id));
 
