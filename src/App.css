@@ -840,12 +840,31 @@ nav.navbar.scrolled {
   margin-bottom: 48px;
 }
 
+/* Masked Text Reveal */
+.masked-label-wrapper {
+  overflow: hidden;
+  display: inline-flex;
+  margin-bottom: 10px;
+}
+
+.masked-title-wrapper {
+  overflow: hidden;
+  display: block;
+  padding-bottom: 6px;
+  margin-bottom: 14px;
+}
+
 .skills-main-title {
   font-size: clamp(32px, 5vw, 52px);
   font-weight: 900;
   color: var(--text-primary);
-  line-height: 1;
-  margin-bottom: 16px;
+  line-height: 1.1;
+  margin-bottom: 0;
+}
+
+.masked-char {
+  display: inline-block;
+  will-change: transform, opacity;
 }
 
 .skills-subtitle {

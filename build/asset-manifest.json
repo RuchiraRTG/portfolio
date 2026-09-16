@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.68d6423c.css",
+    "main.js": "/static/js/main.b36e49f8.js",
+    "static/js/787.e02c0aaf.chunk.js": "/static/js/787.e02c0aaf.chunk.js",
+    "static/media/new_propic2.png": "/static/media/new_propic2.a94f1711000fcc8fac28.png",
+    "static/media/micro(1).jpg": "/static/media/micro(1).e34f9e45acdf5bd5cf74.jpg",
+    "static/media/eduflow(1).jpg": "/static/media/eduflow(1).08f500c38de0ebcd3821.jpg",
+    "static/media/job(1).jpg": "/static/media/job(1).084ed7035b9ac1ca8c5a.jpg",
+    "static/media/todo(1).jpg": "/static/media/todo(1).451a01211f7676a0e9db.jpg",
+    "static/media/Ruchira cv resume.pdf": "/static/media/Ruchira cv resume.b6b608339dc63da15367.pdf",
+    "static/media/salon(1).jpg": "/static/media/salon(1).bf762b9608a2af650182.jpg",
+    "static/media/stas(1).jpg": "/static/media/stas(1).f2ab6f279d1f0b786f20.jpg",
+    "static/media/CentraNo2-Bold.ttf": "/static/media/CentraNo2-Bold.2faff7f7d3fc92a2fcd9.ttf",
+    "static/media/CentraNo2-Medium.ttf": "/static/media/CentraNo2-Medium.f94be5b326d78bb32b95.ttf",
+    "static/media/CentraNo2-Book.ttf": "/static/media/CentraNo2-Book.2b143fa4b734a3584043.ttf",
+    "static/media/new_propic.png": "/static/media/new_propic.61ff1163b710f8b58edb.png",
+    "static/media/nav-icon3.svg": "/static/media/nav-icon3.08b285abb8e118b52637efa5d65c5367.svg",
+    "index.html": "/index.html",
+    "static/media/nav-icon1.svg": "/static/media/nav-icon1.721d5414c26365f117e71d46b6641cb2.svg",
+    "static/media/nav-icon2.svg": "/static/media/nav-icon2.178f497aa17b70c42df2a1a8c926ed01.svg",
+    "main.68d6423c.css.map": "/static/css/main.68d6423c.css.map",
+    "main.b36e49f8.js.map": "/static/js/main.b36e49f8.js.map",
+    "787.e02c0aaf.chunk.js.map": "/static/js/787.e02c0aaf.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.68d6423c.css",
+    "static/js/main.b36e49f8.js"
+  ]
+}

@@ -117,6 +117,75 @@ const SkillAccordionItem = ({ item, isOpen, onToggle }) => {
   );
 };
 
+// Masked Text Reveal Animation Variants
+const headerContainerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.12,
+      delayChildren: 0.05,
+    },
+  },
+};
+
+const labelMaskVariants = {
+  hidden: {
+    y: "120%",
+    opacity: 0,
+  },
+  visible: {
+    y: "0%",
+    opacity: 1,
+    transition: {
+      duration: 0.75,
+      ease: [0.16, 1, 0.3, 1],
+    },
+  },
+};
+
+const titleContainerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.035,
+      delayChildren: 0.05,
+    },
+  },
+};
+
+const letterVariants = {
+  hidden: {
+    y: "115%",
+    opacity: 0,
+    rotateZ: 3,
+  },
+  visible: {
+    y: "0%",
+    opacity: 1,
+    rotateZ: 0,
+    transition: {
+      duration: 0.85,
+      ease: [0.16, 1, 0.3, 1],
+    },
+  },
+};
+
+const subtitleVariants = {
+  hidden: {
+    opacity: 0,
+    y: 20,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      delay: 0.25,
+      ease: [0.16, 1, 0.3, 1],
+    },
+  },
+};
+
 export const Skills = () => {
   const [openId, setOpenId] = useState(null);
 
@@ -145,13 +214,37 @@ export const Skills = () => {
   return (
     <section className="skills-section" id="skills" ref={sectionRef}>
       <div className="container-main">
-        <div className="skills-header fade-up">
-          <p className="section-label-slash">/SKILLS</p>
-          <h2 className="skills-main-title">Technologies</h2>
-          <p className="skills-subtitle">
+        <motion.div
+          className="skills-header"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={headerContainerVariants}
+        >
+          <div className="masked-label-wrapper">
+            <motion.p className="section-label-slash" variants={labelMaskVariants}>
+              /SKILLS
+            </motion.p>
+          </div>
+
+          <div className="masked-title-wrapper">
+            <motion.h2 className="skills-main-title" variants={titleContainerVariants}>
+              {"Technologies".split("").map((char, index) => (
+                <motion.span
+                  key={index}
+                  variants={letterVariants}
+                  className="masked-char"
+                >
+                  {char}
+                </motion.span>
+              ))}
+            </motion.h2>
+          </div>
+
+          <motion.p className="skills-subtitle" variants={subtitleVariants}>
             The tools and technologies I work with to build modern, scalable applications.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
         {/* Accordion Content Area */}
         <div className="skills-accordion-container fade-up">

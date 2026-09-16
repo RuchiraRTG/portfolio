@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { BrowserRouter as Router } from "react-router-dom";
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState('home');
@@ -20,8 +19,7 @@ export const NavBar = () => {
   };
 
   return (
-    <Router>
-      <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
+    <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
         <div className="navbar-container">
           {/* Available Badge */}
           <div className="available-badge">
@@ -101,6 +99,5 @@ export const NavBar = () => {
           <a href="#connect" onClick={() => onUpdateActiveLink('connect')}>Contact</a>
         </div>
       </nav>
-    </Router>
   );
 };
